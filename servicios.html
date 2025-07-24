@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tienda de Reparación y Mantenimiento de PCs</title>
+  <style>
+    :root {
+      --celeste: #00bfff;
+      --celeste-claro: #e6f7ff;
+      --gris: #333;
+      --blanco: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background-color: var(--celeste-claro);
+      color: var(--gris);
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: var(--celeste);
+      padding: 20px;
+      color: white;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      font-size: 2.5em;
+    }
+
+    nav {
+      background: white;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      border-bottom: 2px solid var(--celeste);
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--gris);
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: var(--celeste);
+    }
+
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      padding: 40px 10%;
+      background: white;
+    }
+
+    .hero img {
+      max-width: 450px;
+      width: 100%;
+      border-radius: 20px;
+    }
+
+    .hero-text {
+      max-width: 500px;
+    }
+
+    .hero-text h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      color: var(--celeste);
+    }
+
+    .hero-text p {
+      font-size: 1.1em;
+    }
+
+    .galeria {
+      padding: 40px 10%;
+      text-align: center;
+    }
+
+    .galeria h2 {
+      color: var(--celeste);
+      margin-bottom: 30px;
+    }
+
+    .imagenes {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .imagenes img {
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .imagenes img:hover {
+      transform: scale(1.05);
+    }
+
+    .contacto {
+      background: var(--celeste);
+      color: white;
+      padding: 40px 10%;
+      text-align: center;
+    }
+
+    .contacto h2 {
+      margin-bottom: 20px;
+    }
+
+    .btn-contacto {
+      padding: 10px 25px;
+      font-size: 1em;
+      color: var(--celeste);
+      background: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .btn-contacto:hover {
+      background: #dff6ff;
+    }
+
+    footer {
+      background: #222;
+      color: #ccc;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>CompuTec Soluciones</h1>
+    <p>Tu tienda confiable de reparación y mantenimiento de computadoras</p>
+  </header>
+
+  <nav>
+    <a href="#">Inicio</a>
+    <a href="#">Servicios</a>
+    <a href="#">Galería</a>
+    <a href="#">Contacto</a>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h2>Soluciones rápidas, confiables y económicas</h2>
+      <p>Reparamos laptops, PCs, instalación de software, limpieza interna, recuperación de datos y más. Contamos con técnicos especializados y atención al cliente personalizada.</p>
+    </div>
+    <img src="" alt="Servicio Técnico">
+  </section>
+
+  <section class="galeria">
+    <h2>Nuestros Servicios</h2>
+    <div class="imagenes">
+      <img src="hard.png" alt="Reparación de hardware">
+      <img src="solucion.png" alt="Mantenimiento">
+      <img src="hojeada.png" alt="Software y drivers">
+    </div>
+  </section>
+
+  <section class="contacto">
+    <h2>Contáctanos Hoy</h2>
+    <p>¿Tienes problemas con tu computadora? ¡Estamos aquí para ayudarte!</p>
+    <button class="btn-contacto" onclick="contactar()">Enviar Mensaje</button>
+  </section>
+
+  <footer>
+    &copy; 2025 CompuTec Soluciones - Todos los derechos reservados
+  </footer>
+
+  <script>
+    function contactar() {
+      alert("Gracias por tu interés. Pronto nos pondremos en contacto contigo.");
+    }
+  </script>
+
+</body>
+</html>

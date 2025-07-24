@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contacto</title>
+  <style>
+    :root {
+      --celeste: #00bfff;
+      --celeste-claro: #e6f7ff;
+      --gris: #333;
+      --blanco: #fff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background-color: var(--celeste-claro);
+      color: var(--gris);
+    }
+
+    header {
+      background-color: var(--celeste);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      font-size: 2.5em;
+    }
+
+    header p {
+      font-size: 1.1em;
+      margin-top: 10px;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 40px 10%;
+      gap: 40px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .formulario {
+      flex: 1;
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      max-width: 500px;
+    }
+
+    .formulario h2 {
+      color: var(--celeste);
+      margin-bottom: 20px;
+    }
+
+    .formulario label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    .formulario input,
+    .formulario textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1em;
+    }
+
+    .formulario button {
+      margin-top: 20px;
+      background-color: var(--celeste);
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1em;
+      transition: background 0.3s ease;
+    }
+
+    .formulario button:hover {
+      background-color: #009acc;
+    }
+
+    .imagen {
+      flex: 1;
+      text-align: center;
+    }
+
+    .imagen img {
+      max-width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      background-color: #222;
+      color: #ccc;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        padding: 20px;
+      }
+
+      .imagen img {
+        margin-top: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Contáctanos</h1>
+    <p>¿Tienes preguntas? ¡Estamos para ayudarte!</p>
+  </header>
+
+  <section class="container">
+
+    <div class="formulario">
+      <h2>Formulario de Contacto</h2>
+      <form id="contactForm">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="correo">Correo Electrónico:</label>
+        <input type="email" id="correo" name="correo" required>
+
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" required>
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+        <button type="submit">Enviar Mensaje</button>
+      </form>
+    </div>
+
+    <div class="imagen">
+      <img src="servicio.png" alt="Imagen contacto">
+    </div>
+
+  </section>
+
+  <footer>
+    &copy; 2025 CompuTec Soluciones – Todos los derechos reservados
+  </footer>
+
+  <script>
+    // Validación simple del formulario
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const nombre = document.getElementById('nombre').value;
+      const correo = document.getElementById('correo').value;
+      const telefono = document.getElementById('telefono').value;
+      const mensaje = document.getElementById('mensaje').value;
+
+      if (nombre && correo && telefono && mensaje) {
+        alert(`Gracias ${nombre}, tu mensaje fue enviado correctamente. ¡Te responderemos pronto!`);
+        this.reset();
+      } else {
+        alert('Por favor, completa todos los campos del formulario.');
+      }
+    });
+  </script>
+
+</body>
+</html>
